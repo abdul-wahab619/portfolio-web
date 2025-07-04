@@ -1,25 +1,38 @@
-// src/components/Contact.jsx
-import React from "react";
-import {
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaUserGraduate,
-  FaPhone,
-  FaGlobeAfrica,
-  FaLinkedin,
-  FaTwitter,
-  FaGithub,
-  FaYoutube,
-} from "react-icons/fa";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          toast.success(`✅ Message sent successfully!`);
+          form.current.reset();
+        },
+        (error) => {
+          toast.error(`❌ Failed to send message. Please try again.${error}`);
+        }
+      );
+  };
+
   return (
     <>
       <div className="contact-container">
         <div className="main-title">
           <h2>
             Contact <span>Me</span>
-            {/* <span className="bg-text">Contact</span> */}
           </h2>
         </div>
         <div className="contact-content-con">
@@ -27,46 +40,33 @@ const Contact = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fas fa-map-marker-alt"></i>
                   <span>Location</span>
                 </div>
                 <p>Lahore, Pakistan</p>
               </div>
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fas fa-envelope"></i>
                   <span>Email</span>
                 </div>
-                <p>
-                  <span>abdulwahab.sengineer@gmail.com</span>
-                </p>
+                <p>abdulwahab.sengineer@gmail.com</p>
               </div>
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fas fa-user-graduate"></i>
                   <span>Education</span>
                 </div>
-                <p>
-                  <span>University of Gujrat</span>
-                </p>
+                <p>University of Gujrat</p>
               </div>
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fas fa-phone"></i>
                   <span>Mobile Number</span>
                 </div>
-                <p>
-                  <span>03093573172</span>
-                </p>
+                <p>03093573172</p>
               </div>
               <div className="contact-item">
                 <div className="icon">
-                  <i className="fas fa-globe-africa"></i>
                   <span>Languages</span>
                 </div>
-                <p>
-                  <span>English, Urdu & Punjabi</span>
-                </p>
+                <p>English, Urdu & Punjabi</p>
               </div>
             </div>
             <div className="contact-icons">
@@ -74,44 +74,81 @@ const Contact = () => {
                 <a
                   href="https://www.linkedin.com/in/abdul-wahab-aw/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="http://x.com/mrabdulwahabaw/" target="_blank">
+                <a
+                  href="http://x.com/mrabdulwahabaw/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fab fa-twitter"></i>
                 </a>
-                <a href="https://github.com/abdul-wahab619/" target="_blank">
+                <a
+                  href="https://github.com/abdul-wahab619/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fab fa-github"></i>
                 </a>
                 <a
                   href="https://www.youtube.com/@abdul-wahab-aw"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-youtube"></i>
                 </a>
               </div>
             </div>
           </div>
+
           <div className="right-contact">
-            <form action="" className="contact-form">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="contact-form"
+              id="contactForm"
+            >
               <div className="input-control i-c-2">
-                <input type="text" required placeholder="NAME" />
-                <input type="email" required placeholder="EMAIL" />
+                <input
+                  type="text"
+                  name="user_name"
+                  required
+                  placeholder="NAME"
+                />
+                <input
+                  type="email"
+                  name="user_email"
+                  required
+                  placeholder="EMAIL"
+                />
               </div>
               <div className="input-control">
-                <input type="text" required placeholder="SUBJECT" />
+                <input
+                  type="text"
+                  name="subject"
+                  required
+                  placeholder="SUBJECT"
+                />
               </div>
               <div className="input-control">
                 <textarea
-                  name=""
-                  id=""
-                  cols="15"
+                  name="message"
                   rows="8"
+                  required
                   placeholder="MESSAGE HERE..."
                 ></textarea>
               </div>
               <div className="submit-btn">
-                <a href="#" className="main-btn">
+                <a
+                  href="#"
+                  className="main-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("contactForm").requestSubmit();
+                  }}
+                >
                   <span className="btn-text">Submit</span>
                   <span className="btn-icon">
                     <i className="fas fa-envelope"></i>
@@ -122,6 +159,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 };
