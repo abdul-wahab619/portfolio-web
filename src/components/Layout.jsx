@@ -5,7 +5,6 @@ import Portfolio from "./Portfolio";
 import Blogs from "./Blogs";
 import Contact from "./Contact";
 import Controls from "./Controls";
-import ThemeToggle from "./ThemeToggle";
 import "../App.css";
 
 const Layout = () => {
@@ -50,7 +49,6 @@ const Layout = () => {
       style={{ position: "relative", minHeight: "100vh" }}
     >
       <main>{renderSection()}</main>
-      <ThemeToggle />
       <Controls active={activeSection} setActive={setActiveSection} />
     </div>
   );
