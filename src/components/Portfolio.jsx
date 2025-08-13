@@ -46,7 +46,6 @@ const Portfolio = () => {
       <div className="main-title">
         <h2>
           My <span>Portfolio</span>
-          {/* <span className="bg-text">My Work</span> */}
         </h2>
       </div>
       <p className="port-text">Here Is Some Of My Professional Work.</p>
@@ -60,9 +59,6 @@ const Portfolio = () => {
             <div className="icons">
               <a href="#" className="icon">
                 <i className="fab fa-github"></i>
-              </a>
-              <a href="#" className="icon">
-                <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" className="icon">
                 <i className="fab fa-youtube"></i>
@@ -81,9 +77,6 @@ const Portfolio = () => {
                 <i className="fab fa-github"></i>
               </a>
               <a href="#" className="icon">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="icon">
                 <i className="fab fa-youtube"></i>
               </a>
             </div>
@@ -98,9 +91,6 @@ const Portfolio = () => {
             <div className="icons">
               <a href="#" className="icon">
                 <i className="fab fa-github"></i>
-              </a>
-              <a href="#" className="icon">
-                <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" className="icon">
                 <i className="fab fa-youtube"></i>
@@ -119,9 +109,6 @@ const Portfolio = () => {
                 <i className="fab fa-github"></i>
               </a>
               <a href="#" className="icon">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="icon">
                 <i className="fab fa-youtube"></i>
               </a>
             </div>
@@ -138,9 +125,6 @@ const Portfolio = () => {
                 <i className="fab fa-github"></i>
               </a>
               <a href="#" className="icon">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="icon">
                 <i className="fab fa-youtube"></i>
               </a>
             </div>
@@ -155,9 +139,6 @@ const Portfolio = () => {
             <div className="icons">
               <a href="#" className="icon">
                 <i className="fab fa-github"></i>
-              </a>
-              <a href="#" className="icon">
-                <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" className="icon">
                 <i className="fab fa-youtube"></i>

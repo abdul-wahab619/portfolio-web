@@ -1,4 +1,7 @@
 import React from "react";
+import { FaBriefcase, FaGraduationCap, FaFlag } from "react-icons/fa";
+import resume from "../assets/AbdulWahab_Resume.pdf";
+
 
 const About = () => {
   return (
@@ -6,7 +9,6 @@ const About = () => {
       <div className="main-title">
         <h2>
           About <span>me</span>
-          {/* <span className="bg-text">my skill</span> */}
         </h2>
       </div>
       <div className="about-container">
@@ -20,7 +22,7 @@ const About = () => {
             technologies like Node.js and Express.js.
           </p>
           <div className="btn-con">
-            <a href="#" className="main-btn">
+            <a href={resume} className="main-btn">
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">
                 <i className="fas fa-download"></i>
@@ -130,81 +132,118 @@ const About = () => {
       <div className="timeline">
         <div className="timeline-item">
           <div className="tl-icon">
-            <i className="fas fa-briefcase"></i>
+            <FaBriefcase />
           </div>
-          <p className="tl-duration">Jan 2025 - present</p>
+          <p className="tl-duration">Jan 2025 - Present</p>
           <h5>
             Frontend Engineer<span> - Appspresso</span>
           </h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi
-            vero fugit.
-          </p>
+          <ul>
+            <li>
+              Work on <strong>Tributify</strong>, a product serving 50K+ active
+              users.
+            </li>
+            <li>
+              Build responsive web applications using React.js, SCSS, and
+              Bootstrap.
+            </li>
+            <li>
+              Collaborate with teams to deliver intuitive UI components and
+              integrate APIs.
+            </li>
+          </ul>
         </div>
+
         <div className="timeline-item">
           <div className="tl-icon">
-            <i className="fas fa-briefcase"></i>
+            <FaBriefcase />
           </div>
           <p className="tl-duration">Nov 2024 - May 2025</p>
           <h5>
-            Associate MERN Stack Engineer<span> - DafiLabs</span>
+            Associate MERN Stack Engineer<span> - Dafi Labs</span>
           </h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi
-            vero fugit.
-          </p>
+          <ul>
+            <li>
+              Focused on frontend development for <strong>Infix AI Bot</strong>.
+            </li>
+            <li>Worked with Next.js, Tailwind CSS, Redux, and Material UI.</li>
+            <li>
+              Enhanced UI/UX and integrated Web 3.0 dApps with AI features.
+            </li>
+          </ul>
         </div>
+
         <div className="timeline-item">
           <div className="tl-icon">
-            <i className="fas fa-briefcase"></i>
+            <FaBriefcase />
           </div>
           <p className="tl-duration">Aug 2024 - Oct 2024</p>
           <h5>
             Trainee MERN Developer<span> - SabaSoft</span>
           </h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi
-            vero fugit.
-          </p>
+          <ul>
+            <li>
+              Received training in MongoDB, Express.js, React.js, and Node.js.
+            </li>
+            <li>
+              Worked on small-scale web application projects to strengthen MERN
+              skills.
+            </li>
+          </ul>
         </div>
+
         <div className="timeline-item">
           <div className="tl-icon">
-            <i className="fas fa-briefcase"></i>
+            <FaBriefcase />
           </div>
           <p className="tl-duration">Sep 2023 - Nov 2023</p>
           <h5>
             Summer Internship<span> - TwinSpider</span>
           </h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi
-            vero fugit.
-          </p>
+          <ul>
+            <li>Full-stack development using Ruby on Rails.</li>
+            <li>
+              Completed the <strong>Bugzilla</strong> project in one month.
+            </li>
+            <li>
+              Worked with SQL, React.js, and Ruby on Rails to build and optimize
+              features.
+            </li>
+          </ul>
         </div>
+
         <div className="timeline-item">
           <div className="tl-icon">
-            <i className="fas fa-briefcase"></i>
+            <FaGraduationCap size={24} />
           </div>
           <p className="tl-duration">2020 - 2024</p>
           <h5>
-            Computer Science Degree<span> - University of Gujrat</span>
+            Bachelor’s in Computer Science<span> - University of Gujrat</span>
           </h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi
-            vero fugit.
-          </p>
+          <ul>
+            <li>
+              Graduated with a focus on software development and web
+              technologies.
+            </li>
+            <li>
+              Completed multiple academic projects in web and mobile
+              development.
+            </li>
+          </ul>
         </div>
+
         <div className="timeline-item">
           <div className="tl-icon">
-            <i className="fas fa-briefcase"></i>
+            <FaFlag size={20} />
           </div>
           <p className="tl-duration">2013 - 2020</p>
           <h5>
-            Degree<span> - Higher School</span>
+            Higher Secondary Education<span> - [School & College]</span>
           </h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi
-            vero fugit.
-          </p>
+          <ul>
+            <li>Completed secondary and higher secondary education.</li>
+            <li>Focused on science and mathematics.</li>
+          </ul>
         </div>
       </div>
     </>

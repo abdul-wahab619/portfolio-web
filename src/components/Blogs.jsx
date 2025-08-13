@@ -47,7 +47,6 @@ const Blogs = () => {
         <div className="main-title">
           <h2>
             My <span>Blogs</span>
-            {/* <span className="bg-text">My Blog</span> */}
           </h2>
         </div>
         <div className="blogs">
