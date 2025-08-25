@@ -1,8 +1,8 @@
 import aistartup from "../assets/images/3d-startup-app.png";
 import instella from "../assets/images/Instella.png";
-import movies2 from "../assets/images/MOVIES2_.png";
+import aiResumeBuilder from "../assets/images/AI-Resume-Builder.png";
 import movieApp from "../assets/images/Movie-app.png";
-import portfolio2 from "../assets/images/PORTFOLIO..png";
+import aiMedlab from "../assets/images/AI-MedLab.png";
 import shoeVista from "../assets/images/shoeVista.png";
 
 const Portfolio = () => {
@@ -100,15 +100,21 @@ const Portfolio = () => {
 
         <div className="portfolio-item">
           <div className="image">
-            <img src={movies2} alt="" />
+            <img src={aiResumeBuilder} alt="AI Resume Builder" />
           </div>
           <div className="hover-items">
-            <h3>Project Source</h3>
+            <h3>AI Resume Builder</h3>
             <div className="icons">
-              <a href="#" className="icon">
+              <a
+                href="https://github.com/abdul-wahab619/AI-Resume-Builder"
+                className="icon"
+              >
                 <i className="fab fa-github"></i>
               </a>
-              <a href="#" className="icon">
+              <a
+                href="https://github.com/abdul-wahab619/AI-Resume-Builder"
+                className="icon"
+              >
                 <i className="fas fa-link"></i>
               </a>
             </div>
@@ -117,15 +123,18 @@ const Portfolio = () => {
 
         <div className="portfolio-item">
           <div className="image">
-            <img src={portfolio2} alt="" />
+            <img src={aiMedlab} alt="AI MedLab" />
           </div>
           <div className="hover-items">
-            <h3>Project Source</h3>
+            <h3>AI MedLab</h3>
             <div className="icons">
-              <a href="#" className="icon">
+              <a
+                href="https://github.com/abdul-wahab619/AI-MedLab"
+                className="icon"
+              >
                 <i className="fab fa-github"></i>
               </a>
-              <a href="#" className="icon">
+              <a href="https://medi-care-plum.vercel.app/" className="icon">
                 <i className="fas fa-link"></i>
               </a>
             </div>
